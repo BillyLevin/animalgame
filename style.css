@@ -182,7 +182,8 @@ main {
   .container {
     min-width: 100%;
     max-width: 100%;
-    height: 100vh;
+    min-height: 100vh;
+    max-height: 100%;
   }
   .heading {
     font-size: 5rem;
@@ -198,5 +199,8 @@ main {
   }
   .instructions {
     font-size: 2rem;
+  }
+  .animal-name {
+    font-size: 4rem;
   }
 }
