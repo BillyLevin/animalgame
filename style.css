@@ -1,0 +1,172 @@
+:root {
+  --red: #d60000;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+main {
+  background: linear-gradient(rgba(255,255,255,.6), rgba(255,255,255,.6)), url(img/background.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 90rem;
+  margin: 0 auto;
+  background-color: rgba(255,0,0,.6);
+  color: #fff;
+  padding: 4rem 8rem;
+  text-align: center;
+}
+
+.heading {
+  font-size: 8rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.instructions {
+  font-size: 2.5rem;
+}
+
+.animal-card {
+  background-color: rgba(255, 255, 255, .85);
+  padding: 7rem;
+  border-radius: 2rem;
+  margin-top: 3rem;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+.animal-img {
+  width: 20rem;
+  margin-bottom: 2.5rem;
+  outline: 1rem solid var(--red);
+  outline-offset: 1rem;
+}
+
+.attribution {
+  margin-bottom: 4rem;
+  font-size: 1.2rem;
+  color: #111;
+}
+
+.attribution-link:link,
+.attribution-link:visited {
+  text-decoration: none;
+  color: var(--red);
+}
+
+.attribution-link:hover,
+.attribution-link:active {
+  text-decoration: underline;
+}
+
+.animal-name {
+  font-size: 5.5rem;
+  font-weight: 400;
+  color: var(--red);
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+}
+
+.animal-info:link,
+.animal-info:visited {
+  color: var(--red);
+  font-size: 1.8rem;
+  text-decoration: none;
+  border-bottom: 1px solid var(--red);
+}
+
+.animal-info:hover,
+.animal-info:active {
+  font-weight: 700;
+}
+
+.paws {
+  fill: white;
+  display: none;
+  margin: 5rem 0;
+}
+
+#paw_1 {
+  opacity: 0;
+  animation-name: paw;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+#paw_2 {
+  opacity: 0;
+  animation-name: paw;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-delay: .5s;
+}
+
+#paw_3 {
+  opacity: 0;
+  animation-name: paw;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-delay: 1s;
+}
+
+@keyframes paw {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.generate-btn,
+.generate-btn:visited {
+  border: 0;
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  border-radius: 100rem;
+  background-color: #eee;
+  color: var(--red);
+  cursor: pointer;
+  transition: all .2s;
+  outline: none;
+  margin-top: 4rem;
+}
+
+.generate-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 .8rem 5rem rgba(0, 0, 0, .3);
+}
+
+.generate-btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 .5rem 3rem rgba(0, 0, 0, .3);
+}
